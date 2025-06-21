@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 14, in script
+    n "오랜 시간 꿈꿔온 회사에서, 드디어 면접 기회를 얻었다."
+Exception: Sayer 'n' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 14, in script
+    n "오랜 시간 꿈꿔온 회사에서, 드디어 면접 기회를 얻었다."
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
+    Say.execute(self)
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 583, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 472, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'n' is not defined.
+
+Windows-10-10.0.26100 AMD64
+Ren'Py 8.3.7.25031702
+Interview 1.0
+Sat Jun 21 20:54:41 2025
