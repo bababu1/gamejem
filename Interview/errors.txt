@@ -1,0 +1,34 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 363: end of line expected.
+    iv "...", iv_thinking, "논리적인 답변이네요. 리스크 관리 방안까지 생각했다니, 좋습니다."
+            ^
+
+File "game/script.rpy", line 368: end of line expected.
+    iv "...", iv_thinking, "다소 감정적인 호소처럼 들리지만... 위기 의식은 확실히 느껴지네요."
+            ^
+
+File "game/script.rpy", line 374: end of line expected.
+    iv "...", iv_serious, "구체적인 근거가 부족하군요. 알겠습니다."
+            ^
+
+File "game/script.rpy", line 485: end of line expected.
+    iv "...", iv_thinking, "압박 속에서도 평정심을 잃지 않는군요. 알겠습니다."
+            ^
+
+File "game/script.rpy", line 490: end of line expected.
+    iv "...", iv_serious, "알겠습니다. 다음 질문으로 넘어가죠."
+            ^
+
+File "game/script.rpy", line 496: end of line expected.
+    iv "...", iv_serious, "..."
+            ^
+
+File "game/script.rpy", line 521: end of line expected.
+    sen "...", sen_neutral, "알겠습니다."
+             ^
+
+Ren'Py Version: Ren'Py 8.3.7.25031702
+Sat Jun 21 21:12:27 2025

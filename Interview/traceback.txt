@@ -1,24 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 14, in script
-    n "오랜 시간 꿈꿔온 회사에서, 드디어 면접 기회를 얻었다."
-Exception: Sayer 'n' is not defined.
+While loading <renpy.display.im.Image object ('images/interviewer_neutral.png') at 0x0000000005384460>:
+  File "game/script.rpy", line 109, in script
+    menu:
+ValueError: unsupported format character '?' (0xb2e8) at index 47
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 14, in script
-    n "오랜 시간 꿈꿔온 회사에서, 드디어 면접 기회를 얻었다."
-  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
-    Say.execute(self)
-  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 583, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 472, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'n' is not defined.
+  File "game/script.rpy", line 109, in script
+    menu:
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\ast.py", line 1632, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\exports\menuexports.py", line 99, in menu
+    label = substitute(label)
+  File "C:\Users\user\Desktop\renpy-8.3.7-sdk\renpy\exports\menuexports.py", line 62, in substitute
+    return s % renpy.exports.tag_quoting_dict
+ValueError: unsupported format character '?' (0xb2e8) at index 47
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 Interview 1.0
-Sat Jun 21 20:54:41 2025
+Sat Jun 21 21:15:25 2025
