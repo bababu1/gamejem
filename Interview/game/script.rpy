@@ -29,11 +29,11 @@ define narr = Character(None, what_prefix="【 ", what_suffix=" 】")
 # ──────────────────────────────────────────────────
 # 3)  이미지 정의 (누락 보강 포함)
 # ──────────────────────────────────────────────────
-image bg office        = "images/bg_office.jpg"
+image bg office        = "images/bg_office.png"
 image bg lounge        = "images/bg_lounge.jpg"
 
 image iv_happy         = "images/interviewer_happy.png"
-image iv_neutral       = "images/interviewer_neutral.png"   # ← 기존 누락분 보강
+image iv_neutral       = "images/interviewer_neutral.png"   
 image iv_serious       = "images/interviewer_serious.png"
 image iv_thinking      = "images/interviewer_thinking.png"
 image iv_surprised     = "images/interviewer_surprised.png"
@@ -46,7 +46,8 @@ image tea_happy        = "images/teammate_happy.png"
 # ──────────────────────────────────────────────────
 
 label start:
-    scene bg office
+    scene bg office:
+        zoom 1.5  # 배경 확대
     show iv_neutral
     iv "반갑습니다. 저희 회사에 지원해주셔서 감사합니다."
     iv "저는 오늘 면접을 진행할 OOO입니다."
@@ -67,8 +68,10 @@ label q1:
             jump q2_enthusiastic
 
         "구체적인 데이터와 성과로 증명하는, 결과 중심의 지원자 OOO입니다.":
+            show iv_happy
             iv "성과 중심의 접근, 좋습니다. 기대가 되는군요."
             $ pro += 2
+            hide iv_happy
             jump q2_result
 
         "어... 안녕하십니까. 이번 개발 직무에 지원하게 된 OOO입니다. 잘 부탁드립니다.":
@@ -107,8 +110,7 @@ label q2_enthusiastic:
 # ──────────────────────────────────────────────────
 
 label q2_result:
-    show iv_thinking
-    iv "결과를 중요시하는군요. 좋습니다. 본인이 주도했던 프로젝트 중 가장 자랑스러운 성과가 있다면 구체적인 수치를 포함해서 말씀해주시겠어요?"
+    iv "좋습니다. 본인이 주도했던 프로젝트 중 가장 자랑스러운 성과가 있다면 구체적인 수치를 포함해서 말씀해주시겠어요?"
     menu:
         "기존의 수동 프로세스를 자동화하는 스크립트를 개발하여 팀의 월간 업무 시간을 50%% 단축시킨 경험이 있습니다.":
             $ pro += 2
